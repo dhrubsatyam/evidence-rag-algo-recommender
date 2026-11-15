@@ -2,8 +2,7 @@
 
 Local prototype for AAI 590 Group 3. Given a tabular classification problem and its constraints, the pipeline retrieves machine-learning abstracts and returns a short list of candidate algorithms with citations and an explicit uncertainty note. The same question can be answered with retrieval turned off, which is the comparison the project is built around.
 
-This follows the Group 3 plan (evidence-grounded recommendation over research abstracts). It is not the separate NeuroPulse EEG proposal.
-
+This follows the Group 3 plan (evidence-grounded recommendation over research abstracts). 
 ## What each phase does
 
 | Phase | Plan task | Output |

@@ -1,0 +1,27 @@
+{
+  "dataset": "arXiv metadata and abstracts",
+  "provider": "Cornell University arXiv via the public export API",
+  "kaggle_note": "The course plan names the Cornell arXiv dataset on Kaggle. That file is a snapshot of this same metadata. A date-pinned API subset is used so the corpus stays small enough to index locally and does not require a Kaggle credential. Full text is excluded.",
+  "downloaded_at_utc": "2026-11-15T07:13:08.832550+00:00",
+  "reuse": "Metadata and abstracts are used for academic retrieval experiments. Papers remain the property of their authors. Do not treat retrieved abstracts as proof that an algorithm is best for a problem.",
+  "record_count_raw": 712,
+  "queries": [
+    {
+      "name": "cs.LG-classification-2024H1",
+      "search_query": "cat:cs.LG AND all:classification AND submittedDate:[202401010000 TO 202406302359]",
+      "reported_total": 2500,
+      "downloaded": 400,
+      "pages": 4,
+      "selection": "newest submittedDate within the pinned window, capped"
+    },
+    {
+      "name": "stat.ML-classification-2024H1",
+      "search_query": "cat:stat.ML AND all:classification AND submittedDate:[202401010000 TO 202406302359]",
+      "reported_total": 312,
+      "downloaded": 312,
+      "pages": 4,
+      "selection": "newest submittedDate within the pinned window, capped"
+    }
+  ],
+  "raw_path": "data/raw/records.jsonl"
+}

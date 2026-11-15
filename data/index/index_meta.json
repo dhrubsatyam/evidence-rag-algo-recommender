@@ -1,0 +1,7 @@
+{
+  "documents": 671,
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "embedding_dim": 384,
+  "lexical": "BM25Okapi on title + abstract",
+  "bm25_ready": true
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Evidence-grounded algorithm recommendation</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1c2430;
+      --muted: #5c6775;
+      --line: #d5dbe3;
+      --paper: #f6f4ef;
+      --card: #fff;
+      --accent: #1f4e5f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font: 16px/1.5 "Iowan Old Style", Palatino, Georgia, serif;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header, main { max-width: 980px; margin: 0 auto; padding: 28px 20px; }
+    header { padding-bottom: 0; }
+    h1 { font-size: 1.8rem; line-height: 1.2; margin: 0 0 8px; }
+    h2 { font-size: 1.05rem; margin: 0 0 10px; }
+    p { margin: 0 0 10px; }
+    .muted { color: var(--muted); font-family: "Source Sans 3", "Segoe UI", sans-serif; font-size: 0.92rem; }
+    .layout { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    form, .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    label { display: block; font-family: "Source Sans 3", "Segoe UI", sans-serif; font-size: 0.82rem; margin: 10px 0 4px; }
+    textarea, input, select {
+      width: 100%;
+      font: 0.95rem/1.4 "Source Sans 3", "Segoe UI", sans-serif;
+      padding: 8px 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+    textarea { min-height: 140px; resize: vertical; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    button {
+      margin-top: 14px;
+      background: var(--accent);
+      color: white;
+      border: 0;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font: 600 0.95rem/1 "Source Sans 3", "Segoe UI", sans-serif;
+      cursor: pointer;
+    }
+    button.secondary { background: transparent; color: var(--accent); border: 1px solid var(--accent); margin-right: 8px; }
+    pre {
+      white-space: pre-wrap;
+      font-family: "Source Sans 3", "Segoe UI", sans-serif;
+      font-size: 0.92rem;
+    }
+    a { color: var(--accent); }
+    .tag { display: inline-block; border: 1px solid var(--line); border-radius: 999px; padding: 2px 8px; margin-right: 6px; font-family: sans-serif; font-size: 0.78rem; }
+    @media (max-width: 800px) {
+      .layout, .row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="muted">AAI 590 · Group 3 · local prototype</p>
+    <h1>Evidence-grounded algorithm recommendation</h1>
+    <p>Describe a tabular classification problem. The app retrieves arXiv abstracts and returns a shortlist with citations, or it says when the evidence is not enough.</p>
+    <p class="muted">Research prototype. Abstracts are not proof that an algorithm is best, and this is not a substitute for validation on your own data.</p>
+  </header>
+  <main>
+    <div class="layout">
+      <form id="form">
+        <label for="problem">Problem</label>
+        <textarea id="problem" required>A lender wants to flag accounts likely to miss next month's payment. Inputs are billing history, payment amounts, and demographics. False alarms create extra manual review, and missed defaults are costly.</textarea>
+        <div class="row">
+          <div>
+            <label for="sample_size">Sample size</label>
+            <input id="sample_size" value="30000 rows" />
+          </div>
+          <div>
+            <label for="class_balance">Class balance</label>
+            <input id="class_balance" value="about 22 percent positive" />
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label for="interpretability">Interpretability</label>
+            <input id="interpretability" value="high, compliance review" />
+          </div>
+          <div>
+            <label for="latency">Latency</label>
+            <input id="latency" value="overnight batch" />
+          </div>
+        </div>
+        <label for="generator">Answer method</label>
+        <select id="generator">
+          <option value="extractive">Extractive shortlist from retrieved abstracts</option>
+          <option value="local_lm">Local language model (slower, downloads weights on first use)</option>
+        </select>
+        <label><input id="use_retrieval" type="checkbox" checked style="width:auto" /> Use retrieval</label>
+        <button type="submit">Recommend</button>
+        <button type="button" class="secondary" id="clear-constraints">Ask with missing constraints</button>
+      </form>
+      <section class="card" id="out">
+        <h2>Result</h2>
+        <p class="muted">Submit a problem to see the shortlist, citations, and retrieval trace.</p>
+      </section>
+    </div>
+  </main>
+  <script>
+    const form = document.getElementById("form");
+    const out = document.getElementById("out");
+    document.getElementById("clear-constraints").onclick = () => {
+      for (const id of ["sample_size", "class_balance", "interpretability", "latency"]) {
+        document.getElementById(id).value = "";
+      }
+    };
+    form.onsubmit = async (event) => {
+      event.preventDefault();
+      out.innerHTML = "<h2>Result</h2><p>Working… the first local-model request can take several minutes.</p>";
+      const payload = {
+        problem: document.getElementById("problem").value,
+        task: "tabular_classification",
+        generator: document.getElementById("generator").value,
+        use_retrieval: document.getElementById("use_retrieval").checked,
+        constraints: {
+          sample_size: document.getElementById("sample_size").value,
+          class_balance: document.getElementById("class_balance").value,
+          interpretability: document.getElementById("interpretability").value,
+          latency: document.getElementById("latency").value
+        }
+      };
+      const response = await fetch("/api/recommend", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(payload)
+      });
+      const data = await response.json();
+      render(data);
+    };
+    function render(data) {
+      if (data.questions) {
+        out.innerHTML = "<h2>Clarifying questions</h2><ul>" + data.questions.map(q => `<li>${q}</li>`).join("") + "</ul>";
+        return;
+      }
+      if (data.error) {
+        out.innerHTML = `<h2>Result</h2><p>${data.error}</p>`;
+        return;
+      }
+      const cites = (data.retrieval || []).map(item =>
+        `<li><a href="${item.url}" target="_blank" rel="noreferrer">${item.arxiv_id}</a> · cosine ${Number(item.cosine).toFixed(3)}<br>${item.title}</li>`
+      ).join("");
+      out.innerHTML = `
+        <h2>Result</h2>
+        <p><span class="tag">${data.status || ""}</span><span class="tag">${data.generator || ""}</span></p>
+        <pre>${escapeHtml(data.recommendations_text || data.reason || "")}</pre>
+        <h2>Retrieved abstracts</h2>
+        <ol>${cites || "<li>None</li>"}</ol>`;
+    }
+    function escapeHtml(text) {
+      return text.replace(/[&<>]/g, ch => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[ch]));
+    }
+  </script>
+</body>
+</html>

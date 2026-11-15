@@ -1,0 +1,31 @@
+{
+  "results": [
+    {
+      "probe_id": "probe-out-of-scope",
+      "expect": "insufficient_evidence",
+      "ok": true,
+      "status": "insufficient_evidence",
+      "questions": []
+    },
+    {
+      "probe_id": "probe-tabular",
+      "expect": "citations_resolve",
+      "ok": true,
+      "status": "ok",
+      "questions": []
+    },
+    {
+      "probe_id": "probe-missing-constraints",
+      "expect": "needs_clarification",
+      "ok": true,
+      "status": "needs_clarification",
+      "questions": [
+        "About how many labeled rows are available?",
+        "Is the label balanced, moderately skewed, or extremely rare?",
+        "Do you need a model a reviewer can explain, or is accuracy enough?",
+        "Must predictions be fast online, or is offline batch scoring acceptable?"
+      ]
+    }
+  ],
+  "passed": true
+}

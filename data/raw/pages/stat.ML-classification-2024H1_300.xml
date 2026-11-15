@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/B1eZtXd5CusojhyjNWvn7AmWGoQ</id>
+  <title>arXiv Query: search_query=cat:stat.ML AND all:classification AND submittedDate:"202401010000 TO 202406302359"&amp;id_list=&amp;start=300&amp;max_results=100</title>
+  <updated>2026-11-15T07:13:05Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=cat:stat.ML+AND+(all:classification+AND+submittedDate:%22202401010000+TO+202406302359%22)&amp;start=300&amp;max_results=100&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>312</opensearch:totalResults>
+  <opensearch:startIndex>300</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2401.08488v1</id>
+    <title>A Novel Approach in Solving Stochastic Generalized Linear Regression via Nonconvex Programming</title>
+    <updated>2024-01-16T16:45:51Z</updated>
+    <link href="https://arxiv.org/abs/2401.08488v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.08488v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generalized linear regressions, such as logistic regressions or Poisson regressions, are long-studied regression analysis approaches, and their applications are widely employed in various classification problems. Our study considers a stochastic generalized linear regression model as a stochastic problem with chance constraints and tackles it using nonconvex programming techniques. Clustering techniques and quantile estimation are also used to estimate random data's mean and variance-covariance matrix. Metrics for measuring the performance of logistic regression are used to assess the model's efficacy, including the F1 score, precision score, and recall score. The results of the proposed algorithm were over 1 to 2 percent better than the ordinary logistic regression model on the same dataset with the above assessment criteria.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-16T16:45:51Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Vu Duc Anh</name>
+    </author>
+    <author>
+      <name>Tran Anh Tuan</name>
+    </author>
+    <author>
+      <name>Tran Ngoc Thang</name>
+    </author>
+    <author>
+      <name>Nguyen Thi Ngoc Anh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.07627v1</id>
+    <title>Cost-sensitive Feature Selection for Support Vector Machines</title>
+    <updated>2024-01-15T12:07:52Z</updated>
+    <link href="https://arxiv.org/abs/2401.07627v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.07627v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Feature Selection is a crucial procedure in Data Science tasks such as Classification, since it identifies the relevant variables, making thus the classification procedures more interpretable, cheaper in terms of measurement and more effective by reducing noise and data overfit. The relevance of features in a classification procedure is linked to the fact that misclassifications costs are frequently asymmetric, since false positive and false negative cases may have very different consequences. However, off-the-shelf Feature Selection procedures seldom take into account such cost-sensitivity of errors.
+  In this paper we propose a mathematical-optimization-based Feature Selection procedure embedded in one of the most popular classification procedures, namely, Support Vector Machines, accommodating asymmetric misclassification costs. The key idea is to replace the traditional margin maximization by minimizing the number of features selected, but imposing upper bounds on the false positive and negative rates. The problem is written as an integer linear problem plus a quadratic convex problem for Support Vector Machines with both linear and radial kernels.
+  The reported numerical experience demonstrates the usefulness of the proposed Feature Selection procedure. Indeed, our results on benchmark data sets show that a substantial decrease of the number of features is obtained, whilst the desired trade-off between false positive and false negative rates is achieved.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-15T12:07:52Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <arxiv:journal_ref>S. Benítez-Peña, R. Blanquero, E. Carrizosa, P. Ramírez-Cobo. Cost-sensitive Feature Selection for Support Vector Machines, Computers &amp; Operations Research, Volume 106, 2019, Pages 169-178</arxiv:journal_ref>
+    <author>
+      <name>Sandra Benítez-Peña</name>
+    </author>
+    <author>
+      <name>Rafael Blanquero</name>
+    </author>
+    <author>
+      <name>Emilio Carrizosa</name>
+    </author>
+    <author>
+      <name>Pepa Ramírez-Cobo</name>
+    </author>
+    <arxiv:doi>10.1016/j.cor.2018.03.005</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.cor.2018.03.005" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.07187v3</id>
+    <title>A Survey on Statistical Theory of Deep Learning: Approximation, Training Dynamics, and Generative Models</title>
+    <updated>2024-09-16T09:57:35Z</updated>
+    <link href="https://arxiv.org/abs/2401.07187v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.07187v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this article, we review the literature on statistical theories of neural networks from three perspectives: approximation, training dynamics and generative models. In the first part, results on excess risks for neural networks are reviewed in the nonparametric framework of regression (and classification in Appendix~{\color{blue}B}). These results rely on explicit constructions of neural networks, leading to fast convergence rates of excess risks. Nonetheless, their underlying analysis only applies to the global minimizer in the highly non-convex landscape of deep neural networks. This motivates us to review the training dynamics of neural networks in the second part. Specifically, we review papers that attempt to answer ``how the neural network trained via gradient-based methods finds the solution that can generalize well on unseen data.'' In particular, two well-known paradigms are reviewed: the Neural Tangent Kernel (NTK) paradigm, and Mean-Field (MF) paradigm. Last but not least, we review the most recent theoretical advancements in generative models including Generative Adversarial Networks (GANs), diffusion models, and in-context learning (ICL) in the Large Language Models (LLMs) from two perpsectives reviewed previously, i.e., approximation and training dynamics.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-14T02:30:19Z</published>
+    <arxiv:comment>38 pages, 2 figures. Invited for review in Annual Review of Statistics and Its Application</arxiv:comment>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Namjoon Suh</name>
+    </author>
+    <author>
+      <name>Guang Cheng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.05765v2</id>
+    <title>A new computationally efficient algorithm to solve Feature Selection for Functional Data Classification in high-dimensional spaces</title>
+    <updated>2024-03-05T10:48:22Z</updated>
+    <link href="https://arxiv.org/abs/2401.05765v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.05765v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper introduces a novel methodology for Feature Selection for Functional Classification, FSFC, that addresses the challenge of jointly performing feature selection and classification of functional data in scenarios with categorical responses and multivariate longitudinal features. FSFC tackles a newly defined optimization problem that integrates logistic loss and functional features to identify the most crucial variables for classification. To address the minimization procedure, we employ functional principal components and develop a new adaptive version of the Dual Augmented Lagrangian algorithm. The computational efficiency of FSFC enables handling high-dimensional scenarios where the number of features may considerably exceed the number of statistical units. Simulation experiments demonstrate that FSFC outperforms other machine learning and deep learning methods in computational time and classification accuracy. Furthermore, the FSFC feature selection capability can be leveraged to significantly reduce the problem's dimensionality and enhance the performances of other classification algorithms. The efficacy of FSFC is also demonstrated through a real data application, analyzing relationships between four chronic diseases and other health and demographic factors.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-11T09:17:25Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <arxiv:journal_ref>ICML 2024: https://openreview.net/forum?id=a7MW5kFFOf</arxiv:journal_ref>
+    <author>
+      <name>Tobia Boschi</name>
+    </author>
+    <author>
+      <name>Francesca Bonin</name>
+    </author>
+    <author>
+      <name>Rodrigo Ordonez-Hurtado</name>
+    </author>
+    <author>
+      <name>Alessandra Pascale</name>
+    </author>
+    <author>
+      <name>Jonathan Epperlein</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.03482v3</id>
+    <title>Uncertainty Quantification on Clinical Trial Outcome Prediction</title>
+    <updated>2024-11-30T00:49:11Z</updated>
+    <link href="https://arxiv.org/abs/2401.03482v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.03482v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The importance of uncertainty quantification is increasingly recognized in the diverse field of machine learning. Accurately assessing model prediction uncertainty can help provide deeper understanding and confidence for researchers and practitioners. This is especially critical in medical diagnosis and drug discovery areas, where reliable predictions directly impact research quality and patient health.
+  In this paper, we proposed incorporating uncertainty quantification into clinical trial outcome predictions. Our main goal is to enhance the model's ability to discern nuanced differences, thereby significantly improving its overall performance.
+  We have adopted a selective classification approach to fulfill our objective, integrating it seamlessly with the Hierarchical Interaction Network (HINT), which is at the forefront of clinical trial prediction modeling. Selective classification, encompassing a spectrum of methods for uncertainty quantification, empowers the model to withhold decision-making in the face of samples marked by ambiguity or low confidence, thereby amplifying the accuracy of predictions for the instances it chooses to classify. A series of comprehensive experiments demonstrate that incorporating selective classification into clinical trial predictions markedly enhances the model's performance, as evidenced by significant upticks in pivotal metrics such as PR-AUC, F1, ROC-AUC, and overall accuracy.
+  Specifically, the proposed method achieved 32.37\%, 21.43\%, and 13.27\% relative improvement on PR-AUC over the base model (HINT) in phase I, II, and III trial outcome prediction, respectively. When predicting phase III, our method reaches 0.9022 PR-AUC scores.
+  These findings illustrate the robustness and prospective utility of this strategy within the area of clinical trial predictions, potentially setting a new benchmark in the field.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-07T13:48:05Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Tianyi Chen</name>
+    </author>
+    <author>
+      <name>Yingzhou Lu</name>
+    </author>
+    <author>
+      <name>Nan Hao</name>
+    </author>
+    <author>
+      <name>Yuanyuan Zhang</name>
+    </author>
+    <author>
+      <name>Capucine Van Rechem</name>
+    </author>
+    <author>
+      <name>Jintai Chen</name>
+    </author>
+    <author>
+      <name>Tianfan Fu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.03350v2</id>
+    <title>Accurate and Scalable Estimation of Epistemic Uncertainty for Graph Neural Networks</title>
+    <updated>2024-12-13T04:32:21Z</updated>
+    <link href="https://arxiv.org/abs/2401.03350v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.03350v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>While graph neural networks (GNNs) are widely used for node and graph representation learning tasks, the reliability of GNN uncertainty estimates under distribution shifts remains relatively under-explored. Indeed, while post-hoc calibration strategies can be used to improve in-distribution calibration, they need not also improve calibration under distribution shift. However, techniques which produce GNNs with better intrinsic uncertainty estimates are particularly valuable, as they can always be combined with post-hoc strategies later. Therefore, in this work, we propose G-$Δ$UQ, a novel training framework designed to improve intrinsic GNN uncertainty estimates. Our framework adapts the principle of stochastic data centering to graph data through novel graph anchoring strategies, and is able to support partially stochastic GNNs. While, the prevalent wisdom is that fully stochastic networks are necessary to obtain reliable estimates, we find that the functional diversity induced by our anchoring strategies when sampling hypotheses renders this unnecessary and allows us to support G-$Δ$UQ on pretrained models. Indeed, through extensive evaluation under covariate, concept and graph size shifts, we show that G-$Δ$UQ leads to better calibrated GNNs for node and graph classification. Further, it also improves performance on the uncertainty-based tasks of out-of-distribution detection and generalization gap estimation. Overall, our work provides insights into uncertainty estimation for GNNs, and demonstrates the utility of G-$Δ$UQ in obtaining reliable estimates.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-07T00:58:33Z</published>
+    <arxiv:comment>Published at ICLR 2024; Project page: https://pujacomputes.github.io/gduq/</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Puja Trivedi</name>
+    </author>
+    <author>
+      <name>Mark Heimann</name>
+    </author>
+    <author>
+      <name>Rushil Anirudh</name>
+    </author>
+    <author>
+      <name>Danai Koutra</name>
+    </author>
+    <author>
+      <name>Jayaraman J. Thiagarajan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.03302v4</id>
+    <title>Realism in Action: Anomaly-Aware Diagnosis of Brain Tumors from Medical Images Using YOLOv8 and DeiT</title>
+    <updated>2025-07-01T15:31:37Z</updated>
+    <link href="https://arxiv.org/abs/2401.03302v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.03302v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Reliable diagnosis of brain tumors remains challenging due to low clinical incidence rates of such cases. However, this low rate is neglected in most of proposed methods. We propose a clinically inspired framework for anomaly-resilient tumor detection and classification. Detection leverages YOLOv8n fine-tuned on a realistically imbalanced dataset (1:9 tumor-to-normal ratio; 30,000 MRI slices from 81 patients). In addition, we propose a novel Patient-to-Patient (PTP) metric that evaluates diagnostic reliability at the patient level. Classification employs knowledge distillation: a Data Efficient Image Transformer (DeiT) student model is distilled from a ResNet152 teacher. The distilled ViT achieves an F1-score of 0.92 within 20 epochs, matching near teacher performance (F1=0.97) with significantly reduced computational resources. This end-to-end framework demonstrates high robustness in clinically representative anomaly-distributed data, offering a viable tool that adheres to realistic situations in clinics.</summary>
+    <category term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-06T20:53:02Z</published>
+    <arxiv:primary_category term="eess.IV"/>
+    <author>
+      <name>Seyed Mohammad Hossein Hashemi</name>
+    </author>
+    <author>
+      <name>Leila Safari</name>
+    </author>
+    <author>
+      <name>Mohsen Hooshmand</name>
+    </author>
+    <author>
+      <name>Amirhossein Dadashzadeh Taromi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.02058v2</id>
+    <title>Neural Collapse for Cross-entropy Class-Imbalanced Learning with Unconstrained ReLU Feature Model</title>
+    <updated>2024-06-06T09:36:49Z</updated>
+    <link href="https://arxiv.org/abs/2401.02058v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.02058v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The current paradigm of training deep neural networks for classification tasks includes minimizing the empirical risk that pushes the training loss value towards zero, even after the training error has been vanished. In this terminal phase of training, it has been observed that the last-layer features collapse to their class-means and these class-means converge to the vertices of a simplex Equiangular Tight Frame (ETF). This phenomenon is termed as Neural Collapse (NC). To theoretically understand this phenomenon, recent works employ a simplified unconstrained feature model to prove that NC emerges at the global solutions of the training problem. However, when the training dataset is class-imbalanced, some NC properties will no longer be true. For example, the class-means geometry will skew away from the simplex ETF when the loss converges. In this paper, we generalize NC to imbalanced regime for cross-entropy loss under the unconstrained ReLU feature model. We prove that, while the within-class features collapse property still holds in this setting, the class-means will converge to a structure consisting of orthogonal vectors with different lengths. Furthermore, we find that the classifier weights are aligned to the scaled and centered class-means with scaling factors depend on the number of training samples of each class, which generalizes NC in the class-balanced setting. We empirically prove our results through experiments on practical architectures and dataset.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-04T04:53:31Z</published>
+    <arxiv:comment>2024 International Conference on Machine Learning</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Hien Dang</name>
+    </author>
+    <author>
+      <name>Tho Tran</name>
+    </author>
+    <author>
+      <name>Tan Nguyen</name>
+    </author>
+    <author>
+      <name>Nhat Ho</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.01804v2</id>
+    <title>Efficient Computation of Confidence Sets Using Classification on Equidistributed Grids</title>
+    <updated>2024-11-13T04:50:51Z</updated>
+    <link href="https://arxiv.org/abs/2401.01804v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.01804v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Economic models produce moment inequalities, which can be used to form tests of the true parameters. Confidence sets (CS) of the true parameters are derived by inverting these tests. However, they often lack analytical expressions, necessitating a grid search to obtain the CS numerically by retaining the grid points that pass the test. When the statistic is not asymptotically pivotal, constructing the critical value for each grid point in the parameter space adds to the computational burden. In this paper, we convert the computational issue into a classification problem by using a support vector machine (SVM) classifier. Its decision function provides a faster and more systematic way of dividing the parameter space into two regions: inside vs. outside of the confidence set. We label those points in the CS as 1 and those outside as -1. Researchers can train the SVM classifier on a grid of manageable size and use it to determine whether points on denser grids are in the CS or not. We establish certain conditions for the grid so that there is a tuning that allows us to asymptotically reproduce the test in the CS. This means that in the limit, a point is classified as belonging to the confidence set if and only if it is labeled as 1 by the SVM.</summary>
+    <category term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-03T16:04:14Z</published>
+    <arxiv:primary_category term="econ.EM"/>
+    <author>
+      <name>Lujie Zhou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.01460v1</id>
+    <title>Point Cloud Classification via Deep Set Linearized Optimal Transport</title>
+    <updated>2024-01-02T23:26:33Z</updated>
+    <link href="https://arxiv.org/abs/2401.01460v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.01460v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce Deep Set Linearized Optimal Transport, an algorithm designed for the efficient simultaneous embedding of point clouds into an $L^2-$space. This embedding preserves specific low-dimensional structures within the Wasserstein space while constructing a classifier to distinguish between various classes of point clouds. Our approach is motivated by the observation that $L^2-$distances between optimal transport maps for distinct point clouds, originating from a shared fixed reference distribution, provide an approximation of the Wasserstein-2 distance between these point clouds, under certain assumptions. To learn approximations of these transport maps, we employ input convex neural networks (ICNNs) and establish that, under specific conditions, Euclidean distances between samples from these ICNNs closely mirror Wasserstein-2 distances between the true distributions. Additionally, we train a discriminator network that attaches weights these samples and creates a permutation invariant classifier to differentiate between different classes of point clouds. We showcase the advantages of our algorithm over the standard deep set approach through experiments on a flow cytometry dataset with a limited number of labeled point clouds.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-02T23:26:33Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Scott Mahan</name>
+    </author>
+    <author>
+      <name>Caroline Moosmüller</name>
+    </author>
+    <author>
+      <name>Alexander Cloninger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.00800v2</id>
+    <title>Factor Importance Ranking and Selection using Total Indices</title>
+    <updated>2024-01-12T02:38:40Z</updated>
+    <link href="https://arxiv.org/abs/2401.00800v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.00800v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Factor importance measures the impact of each feature on output prediction accuracy. Many existing works focus on the model-based importance, but an important feature in one learning algorithm may hold little significance in another model. Hence, a factor importance measure ought to characterize the feature's predictive potential without relying on a specific prediction algorithm. Such algorithm-agnostic importance is termed as intrinsic importance in Williamson et al. (2023), but their estimator again requires model fitting. To bypass the modeling step, we present the equivalence between predictiveness potential and total Sobol' indices from global sensitivity analysis, and introduce a novel consistent estimator that can be directly estimated from noisy data. Integrating with forward selection and backward elimination gives rise to FIRST, Factor Importance Ranking and Selection using Total (Sobol') indices. Extensive simulations are provided to demonstrate the effectiveness of FIRST on regression and binary classification problems, and a clear advantage over the state-of-the-art methods.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-01T16:02:06Z</published>
+    <arxiv:primary_category term="stat.ME"/>
+    <arxiv:journal_ref>Technometrics (2025)</arxiv:journal_ref>
+    <author>
+      <name>Chaofan Huang</name>
+    </author>
+    <author>
+      <name>V. Roshan Joseph</name>
+    </author>
+    <arxiv:doi>10.1080/00401706.2025.2483531</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1080/00401706.2025.2483531" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.00781v1</id>
+    <title>Inferring Heterogeneous Treatment Effects of Crashes on Highway Traffic: A Doubly Robust Causal Machine Learning Approach</title>
+    <updated>2024-01-01T15:03:14Z</updated>
+    <link href="https://arxiv.org/abs/2401.00781v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.00781v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Highway traffic crashes exert a considerable impact on both transportation systems and the economy. In this context, accurate and dependable emergency responses are crucial for effective traffic management. However, the influence of crashes on traffic status varies across diverse factors and may be biased due to selection bias. Therefore, there arises a necessity to accurately estimate the heterogeneous causal effects of crashes, thereby providing essential insights to facilitate individual-level emergency decision-making. This paper proposes a novel causal machine learning framework to estimate the causal effect of different types of crashes on highway speed. The Neyman-Rubin Causal Model (RCM) is employed to formulate this problem from a causal perspective. The Conditional Shapley Value Index (CSVI) is proposed based on causal graph theory to filter adverse variables, and the Structural Causal Model (SCM) is then adopted to define the statistical estimand for causal effects. The treatment effects are estimated by Doubly Robust Learning (DRL) methods, which combine doubly robust causal inference with classification and regression machine learning models. Experimental results from 4815 crashes on Highway Interstate 5 in Washington State reveal the heterogeneous treatment effects of crashes at varying distances and durations. The rear-end crashes cause more severe congestion and longer durations than other types of crashes, and the sideswipe crashes have the longest delayed impact. Additionally, the findings show that rear-end crashes affect traffic greater at night, while crash to objects has the most significant influence during peak hours. Statistical hypothesis tests, error metrics based on matched "counterfactual outcomes", and sensitive analyses are employed for assessment, and the results validate the accuracy and effectiveness of our method.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-01T15:03:14Z</published>
+    <arxiv:comment>38 pages, 13 figures, 8 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Shuang Li</name>
+    </author>
+    <author>
+      <name>Ziyuan Pu</name>
+    </author>
+    <author>
+      <name>Zhiyong Cui</name>
+    </author>
+    <author>
+      <name>Seunghyeon Lee</name>
+    </author>
+    <author>
+      <name>Xiucheng Guo</name>
+    </author>
+    <author>
+      <name>Dong Ngoduy</name>
+    </author>
+  </entry>
+</feed>

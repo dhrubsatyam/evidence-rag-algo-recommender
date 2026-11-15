@@ -1,0 +1,48 @@
+{
+  "raw_records": 712,
+  "kept_records": 671,
+  "missing_field_counts": {
+    "arxiv_id": 0,
+    "title": 0,
+    "abstract": 0,
+    "published": 0,
+    "primary_category": 0
+  },
+  "excluded_withdrawn": 0,
+  "excluded_short_abstract": 0,
+  "excluded_outside_ml_categories": 0,
+  "duplicate_ids_dropped": 41,
+  "duplicate_titles_dropped": 0,
+  "inclusion_rules": {
+    "categories": [
+      "cs.AI",
+      "cs.LG",
+      "stat.ML"
+    ],
+    "min_abstract_chars": 200,
+    "drop_withdrawn": true,
+    "dedupe": [
+      "arxiv_id",
+      "normalized title"
+    ],
+    "full_text": "not collected"
+  },
+  "leakage": {
+    "max_jaccard_case_vs_abstract": 0.058,
+    "flagged_at_or_above_0.35": [],
+    "rule": "Authored cases stay in the project. They are not training labels drawn from abstracts."
+  },
+  "schema": [
+    "arxiv_id",
+    "title",
+    "abstract",
+    "authors",
+    "primary_category",
+    "categories",
+    "published",
+    "updated",
+    "doi",
+    "source_query",
+    "source"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "status": "proposed rubric, not a set of results",
+  "freeze_note": "Confirm this rubric before scoring the 20 held-out cases. Do not tune prompts, retrievers, or adapters on held-out cases. Today through the Week 3 checkpoint, pipeline runs score development cases only.",
+  "splits": {"development": 10, "heldout": 20},
+  "retrieval_relevance": {
+    "scale": "0-2 per retrieved paper, top 5",
+    "0": "Unrelated to the decision problem.",
+    "1": "Same broad area but misses the constraint that matters.",
+    "2": "A reviewer could use this abstract when choosing an algorithm for this problem.",
+    "summary": "Precision at 5, and whether at least one useful paper was found."
+  },
+  "constraint_suitability": {
+    "scale": "0-2 on the shortlist",
+    "0": "Ignores a stated constraint such as latency, rarity, or explanation.",
+    "1": "Mentions the constraint but the algorithm choice fights it.",
+    "2": "The shortlist fits the stated constraints closely enough to test."
+  },
+  "evidence_support": {
+    "scale": "0-2",
+    "0": "Claims are not supported by the cited abstracts.",
+    "1": "Citations are relevant but the claim overreaches the abstract.",
+    "2": "Each material claim is backed by a cited abstract that says that."
+  },
+  "citation_and_uncertainty": {
+    "rules": [
+      "Every cited identifier must exist in the local corpus.",
+      "Citations outside the retrieved set for that question count as unsupported.",
+      "If support is missing, the answer must say the evidence is insufficient.",
+      "Target: zero fabricated identifiers."
+    ]
+  },
+  "comparison": "Score the same case with retrieval and without retrieval. Report wins, ties, and losses. Do not assume retrieval helps.",
+  "human_scoring": "Two reviewers score held-out cases independently. A third reviewer adjudicates disagreements. Keep the first scores."
+}

@@ -1,0 +1,3 @@
+{"probe_id":"probe-out-of-scope","task":"image_generation","problem":"Generate a picture of a coastal city at dusk.","constraints":{"sample_size":"n/a","class_balance":"n/a","interpretability":"n/a","latency":"n/a"},"expect":"insufficient_evidence"}
+{"probe_id":"probe-tabular","task":"tabular_classification","problem":"Classify imbalanced tabular credit default with a need for an interpretable batch model.","constraints":{"sample_size":"20000 rows","class_balance":"imbalanced","interpretability":"high","latency":"batch"},"expect":"citations_resolve"}
+{"probe_id":"probe-missing-constraints","task":"tabular_classification","problem":"Classify customer churn.","constraints":{},"expect":"needs_clarification"}

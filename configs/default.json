@@ -1,0 +1,27 @@
+{
+  "user_agent": "AAI590-Group3-evidence-rag/0.1 (academic research; University of San Diego)",
+  "queries": [
+    {
+      "name": "cs.LG-classification-2024H1",
+      "search_query": "cat:cs.LG AND all:classification AND submittedDate:[202401010000 TO 202406302359]"
+    },
+    {
+      "name": "stat.ML-classification-2024H1",
+      "search_query": "cat:stat.ML AND all:classification AND submittedDate:[202401010000 TO 202406302359]"
+    }
+  ],
+  "corpus_cap_per_query": 400,
+  "page_size": 100,
+  "request_interval_seconds": 3.0,
+  "ml_categories": ["cs.LG", "stat.ML", "cs.AI"],
+  "min_abstract_chars": 200,
+  "top_k": 5,
+  "candidate_pool": 30,
+  "rrf_k": 60,
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "llm_model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "max_new_tokens": 240,
+  "low_evidence_cosine": 0.28,
+  "abstract_chars_in_prompt": 650,
+  "embedding_batch_size": 64
+}

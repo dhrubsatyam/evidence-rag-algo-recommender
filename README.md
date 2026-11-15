@@ -1,5 +1,11 @@
 # Evidence-grounded algorithm recommendation
 
+**AAI 590 Capstone — Group 3**
+
+Team: Anugrah Rastogi, Dhrub Satyam, Maunika Konduru
+Faculty guide: Haisav Chokshi
+University of San Diego — Master of Science in Applied Artificial Intelligence
+
 Local prototype for AAI 590 Group 3. Given a tabular classification problem and its constraints, the pipeline retrieves machine-learning abstracts and returns a short list of candidate algorithms with citations and an explicit uncertainty note. The same question can be answered with retrieval turned off, which is the comparison the project is built around.
 
 This follows the Group 3 plan (evidence-grounded recommendation over research abstracts). 

@@ -9,14 +9,13 @@
     "extractive": 20
   },
   "statuses": {
-    "insufficient_evidence": 1,
-    "ungrounded_baseline": 10,
-    "ok": 9
+    "ok": 10,
+    "ungrounded_baseline": 10
   },
-  "cited_ids": 18,
+  "cited_ids": 27,
   "unsupported_ids": 0,
-  "cases_where_retrieval_added_citations": 9,
-  "mean_latency_seconds": 0.0,
+  "cases_where_retrieval_added_citations": 10,
+  "mean_latency_seconds": 0.001,
   "note": "Human 0-2 relevance and suitability scores are not computed here. This file records automatic checks only: identifier resolution, latency, and whether retrieval changed the citation set.",
   "generation_file": "generations_extractive.jsonl"
 }

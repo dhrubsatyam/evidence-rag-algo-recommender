@@ -8,6 +8,8 @@ Faculty guide: Haisav Chokshi
 
 Local prototype for AAI 590 Group 3. Given a tabular classification problem and its constraints, the pipeline retrieves machine-learning abstracts and returns a short list of candidate algorithms with citations and an explicit uncertainty note. The same question can be answered with retrieval turned off, which is the comparison the project is built around.
 
+See [END_TO_END.md](END_TO_END.md) for the full pipeline walkthrough: stages, models, preprocessing, scores, and reproduction commands.
+
 This follows the Group 3 plan (evidence-grounded recommendation over research abstracts). 
 
 ## Run it yourself (first time)
@@ -168,9 +170,14 @@ python -m evidence_rag.neural.predict "Title. Abstract text..."
 python -m evidence_rag.neural.predict --corpus
 ```
 
-Intended use: an auxiliary family-relevance signal that can re-rank or
-filter retrieved abstracts before generation. It is not yet wired into
-the default retrieval path; the RRF hybrid remains the baseline.
+**Retrieval integration.** The tagger is wired into retrieval as a
+third RRF signal (`use_neural_signal` in `configs/default.json`): the
+problem description is scored into a family distribution, each
+abstract's offline family scores are dotted against it, and the
+resulting ranking joins BM25 and dense cosine in RRF fusion. Disable
+with `"use_neural_signal": false` to reproduce the two-signal baseline.
+Regenerate `outputs/neural/family_scores.json` with
+`python -m evidence_rag.neural.predict --corpus` after retraining.
 
 ## Tests
 

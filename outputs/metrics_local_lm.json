@@ -12,10 +12,10 @@
     "ok": 10,
     "ungrounded_baseline": 10
   },
-  "cited_ids": 20,
+  "cited_ids": 15,
   "unsupported_ids": 0,
   "cases_where_retrieval_added_citations": 9,
-  "mean_latency_seconds": 3.68,
+  "mean_latency_seconds": 3.255,
   "note": "Human 0-2 relevance and suitability scores are not computed here. This file records automatic checks only: identifier resolution, latency, and whether retrieval changed the citation set.",
   "generation_file": "generations_local_lm.jsonl"
 }

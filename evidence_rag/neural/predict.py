@@ -59,16 +59,21 @@ def main() -> None:
         records = load_corpus("data/processed/corpus.jsonl")
         texts = [r["title"] + " " + r["abstract"] for r in records]
         probs = score_texts(texts, model, vocab, cfg["max_len"])
+        scores = {}
         for record, row in zip(records, probs.tolist()):
             record["neural_family_scores"] = {
                 fam: round(score, 4) for fam, score in zip(families, row)
             }
+            scores[record["arxiv_id"]] = [round(s, 6) for s in row]
         out = Path("outputs/neural/corpus_scores.jsonl")
         out.parent.mkdir(parents=True, exist_ok=True)
         with open(out, "w", encoding="utf-8") as fh:
             for record in records:
                 fh.write(json.dumps(record) + "\n")
+        compact = {"families": families, "scores": scores}
+        Path("outputs/neural/family_scores.json").write_text(json.dumps(compact))
         print(f"wrote {len(records)} scored records to {out}")
+        print(f"wrote compact family scores to outputs/neural/family_scores.json")
         return
 
     text = args.text

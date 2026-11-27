@@ -23,5 +23,6 @@
   "max_new_tokens": 240,
   "low_evidence_cosine": 0.28,
   "abstract_chars_in_prompt": 650,
-  "embedding_batch_size": 64
+  "embedding_batch_size": 64,
+  "use_neural_signal": true
 }

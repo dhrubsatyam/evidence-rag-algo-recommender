@@ -1,0 +1,697 @@
+{
+  "cases": 10,
+  "generator": "extractive",
+  "variants": {
+    "bm25_only": {
+      "signals": [
+        "bm25"
+      ],
+      "cases": 10,
+      "status_ok": 10,
+      "status_insufficient_evidence": 0,
+      "cited_ids": 18,
+      "unsupported_ids": 0,
+      "low_evidence_cases": 0,
+      "seconds": 4.04,
+      "per_case": [
+        {
+          "case_id": "dev-credit-default",
+          "status": "ok",
+          "cited_ids": [
+            "2406.10294",
+            "2401.07187"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2407.13710",
+            "2406.16975",
+            "2406.15327",
+            "2401.07187",
+            "2406.10294"
+          ]
+        },
+        {
+          "case_id": "dev-readmission",
+          "status": "ok",
+          "cited_ids": [
+            "2407.00710",
+            "2402.14980"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2406.18814",
+            "2406.15327",
+            "2407.00710",
+            "2402.14980",
+            "2402.11215"
+          ]
+        },
+        {
+          "case_id": "dev-churn-latency",
+          "status": "ok",
+          "cited_ids": [
+            "2402.02438",
+            "2401.12667"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2401.12667",
+            "2404.07661",
+            "2403.07724",
+            "2402.02438",
+            "2405.12958"
+          ]
+        },
+        {
+          "case_id": "dev-fraud",
+          "status": "ok",
+          "cited_ids": [
+            "2406.06595",
+            "2406.02979"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2404.07661",
+            "2403.10889",
+            "2406.07876",
+            "2406.06595",
+            "2406.02979"
+          ]
+        },
+        {
+          "case_id": "dev-ecology-smalln",
+          "status": "ok",
+          "cited_ids": [
+            "2406.06595",
+            "2406.13936"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2404.13147",
+            "2406.06595",
+            "2404.17489",
+            "2406.09984",
+            "2406.13936"
+          ]
+        },
+        {
+          "case_id": "dev-manufacturing-drift",
+          "status": "ok",
+          "cited_ids": [
+            "2404.03329",
+            "2406.03999",
+            "2405.19486"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2404.03329",
+            "2406.03999",
+            "2403.12295",
+            "2405.19486",
+            "2406.07876"
+          ]
+        },
+        {
+          "case_id": "dev-dropout-fairness",
+          "status": "ok",
+          "cited_ids": [
+            "2406.07885"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2403.18216",
+            "2403.10889",
+            "2402.11215",
+            "2406.08001",
+            "2406.07885"
+          ]
+        },
+        {
+          "case_id": "dev-labs-recall",
+          "status": "ok",
+          "cited_ids": [
+            "2407.00710"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2407.00710",
+            "2406.09257",
+            "2406.04446",
+            "2402.00857",
+            "2401.14343"
+          ]
+        },
+        {
+          "case_id": "dev-marketing-shap",
+          "status": "ok",
+          "cited_ids": [
+            "2406.05477",
+            "2406.13936"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2406.15327",
+            "2406.05477",
+            "2404.17489",
+            "2403.06311",
+            "2406.13936"
+          ]
+        },
+        {
+          "case_id": "dev-sensor-noise",
+          "status": "ok",
+          "cited_ids": [
+            "2406.07314"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2404.17489",
+            "2405.14088",
+            "2405.04393",
+            "2406.15327",
+            "2406.07314"
+          ]
+        }
+      ]
+    },
+    "dense_only": {
+      "signals": [
+        "dense"
+      ],
+      "cases": 10,
+      "status_ok": 9,
+      "status_insufficient_evidence": 1,
+      "cited_ids": 11,
+      "unsupported_ids": 0,
+      "low_evidence_cases": 0,
+      "seconds": 0.12,
+      "per_case": [
+        {
+          "case_id": "dev-credit-default",
+          "status": "ok",
+          "cited_ids": [
+            "2406.03614"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2402.11338",
+            "2406.04687",
+            "2406.03614",
+            "2403.06812",
+            "2404.13147"
+          ]
+        },
+        {
+          "case_id": "dev-readmission",
+          "status": "ok",
+          "cited_ids": [
+            "2407.00710",
+            "2406.00539"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2406.00539",
+            "2401.03482",
+            "2406.18814",
+            "2407.00710",
+            "2402.07307"
+          ]
+        },
+        {
+          "case_id": "dev-churn-latency",
+          "status": "ok",
+          "cited_ids": [
+            "2405.19486"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2406.07885",
+            "2406.14401",
+            "2405.19486",
+            "2403.18301",
+            "2406.17322"
+          ]
+        },
+        {
+          "case_id": "dev-fraud",
+          "status": "ok",
+          "cited_ids": [
+            "2406.03614"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2406.03614",
+            "2404.13147",
+            "2403.06812",
+            "2406.19049",
+            "2404.07661"
+          ]
+        },
+        {
+          "case_id": "dev-ecology-smalln",
+          "status": "ok",
+          "cited_ids": [
+            "2406.10087"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2404.13147",
+            "2406.17346",
+            "2402.11742",
+            "2406.04928",
+            "2406.10087"
+          ]
+        },
+        {
+          "case_id": "dev-manufacturing-drift",
+          "status": "ok",
+          "cited_ids": [
+            "2404.03329",
+            "2406.16988"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2404.03329",
+            "2406.04687",
+            "2406.12732",
+            "2406.06227",
+            "2406.16988"
+          ]
+        },
+        {
+          "case_id": "dev-dropout-fairness",
+          "status": "ok",
+          "cited_ids": [
+            "2406.07885"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2406.07885",
+            "2406.06818",
+            "2402.11742",
+            "2406.15763",
+            "2403.18216"
+          ]
+        },
+        {
+          "case_id": "dev-labs-recall",
+          "status": "ok",
+          "cited_ids": [
+            "2406.10087"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2406.10087",
+            "2404.13147",
+            "2401.03302",
+            "2406.06479",
+            "2406.06818"
+          ]
+        },
+        {
+          "case_id": "dev-marketing-shap",
+          "status": "insufficient_evidence",
+          "cited_ids": [],
+          "low_evidence": false,
+          "top_ids": [
+            "2406.12507",
+            "2406.11924",
+            "2406.03594",
+            "2402.11338",
+            "2405.15871"
+          ]
+        },
+        {
+          "case_id": "dev-sensor-noise",
+          "status": "ok",
+          "cited_ids": [
+            "2406.10087"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2405.14088",
+            "2404.04800",
+            "2402.04398",
+            "2406.10087",
+            "2402.00857"
+          ]
+        }
+      ]
+    },
+    "hybrid_lexical_dense": {
+      "signals": [
+        "bm25",
+        "dense"
+      ],
+      "cases": 10,
+      "status_ok": 9,
+      "status_insufficient_evidence": 1,
+      "cited_ids": 18,
+      "unsupported_ids": 0,
+      "low_evidence_cases": 0,
+      "seconds": 0.08,
+      "per_case": [
+        {
+          "case_id": "dev-credit-default",
+          "status": "insufficient_evidence",
+          "cited_ids": [],
+          "low_evidence": false,
+          "top_ids": [
+            "2407.13710",
+            "2406.15327",
+            "2406.16975",
+            "2404.13147",
+            "2402.11338"
+          ]
+        },
+        {
+          "case_id": "dev-readmission",
+          "status": "ok",
+          "cited_ids": [
+            "2407.00710",
+            "2402.14980",
+            "2406.07885"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2406.18814",
+            "2407.00710",
+            "2406.06818",
+            "2406.07885",
+            "2402.14980"
+          ]
+        },
+        {
+          "case_id": "dev-churn-latency",
+          "status": "ok",
+          "cited_ids": [
+            "2402.15005",
+            "2401.12667"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2401.12667",
+            "2406.04508",
+            "2402.15005",
+            "2406.07885",
+            "2404.07661"
+          ]
+        },
+        {
+          "case_id": "dev-fraud",
+          "status": "ok",
+          "cited_ids": [
+            "2405.19486"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2404.07661",
+            "2404.14276",
+            "2402.11742",
+            "2406.13369",
+            "2405.19486"
+          ]
+        },
+        {
+          "case_id": "dev-ecology-smalln",
+          "status": "ok",
+          "cited_ids": [
+            "2401.12667",
+            "2406.06595"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2404.13147",
+            "2406.17346",
+            "2401.12667",
+            "2406.06595",
+            "2404.17489"
+          ]
+        },
+        {
+          "case_id": "dev-manufacturing-drift",
+          "status": "ok",
+          "cited_ids": [
+            "2407.00710",
+            "2404.03329"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2404.03329",
+            "2406.07250",
+            "2401.08978",
+            "2406.05900",
+            "2407.00710"
+          ]
+        },
+        {
+          "case_id": "dev-dropout-fairness",
+          "status": "ok",
+          "cited_ids": [
+            "2406.12031",
+            "2406.07885"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2403.18216",
+            "2406.07885",
+            "2402.11742",
+            "2404.17489",
+            "2406.12031"
+          ]
+        },
+        {
+          "case_id": "dev-labs-recall",
+          "status": "ok",
+          "cited_ids": [
+            "2407.00710"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2407.00710",
+            "2406.09257",
+            "2401.16407",
+            "2406.06818",
+            "2406.09931"
+          ]
+        },
+        {
+          "case_id": "dev-marketing-shap",
+          "status": "ok",
+          "cited_ids": [
+            "2406.05477",
+            "2402.14980"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2406.05477",
+            "2406.15327",
+            "2405.14522",
+            "2406.11547",
+            "2402.14980"
+          ]
+        },
+        {
+          "case_id": "dev-sensor-noise",
+          "status": "ok",
+          "cited_ids": [
+            "2406.10087",
+            "2406.03506",
+            "2405.19486"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2405.14088",
+            "2406.10087",
+            "2401.15500",
+            "2406.03506",
+            "2405.19486"
+          ]
+        }
+      ]
+    },
+    "hybrid_full_neural": {
+      "signals": [
+        "bm25",
+        "dense",
+        "neural"
+      ],
+      "cases": 10,
+      "status_ok": 10,
+      "status_insufficient_evidence": 0,
+      "cited_ids": 27,
+      "unsupported_ids": 0,
+      "low_evidence_cases": 0,
+      "seconds": 0.08,
+      "per_case": [
+        {
+          "case_id": "dev-credit-default",
+          "status": "ok",
+          "cited_ids": [
+            "2406.03614",
+            "2405.19486"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2406.03614",
+            "2407.13710",
+            "2405.19486",
+            "2406.15327",
+            "2406.16975"
+          ]
+        },
+        {
+          "case_id": "dev-readmission",
+          "status": "ok",
+          "cited_ids": [
+            "2407.00710",
+            "2405.19486"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2407.00710",
+            "2406.18814",
+            "2406.06818",
+            "2405.19486",
+            "2406.07885"
+          ]
+        },
+        {
+          "case_id": "dev-churn-latency",
+          "status": "ok",
+          "cited_ids": [
+            "2401.12667",
+            "2405.19486",
+            "2406.18861",
+            "2407.00710"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2401.12667",
+            "2402.15005",
+            "2405.19486",
+            "2406.18861",
+            "2407.00710"
+          ]
+        },
+        {
+          "case_id": "dev-fraud",
+          "status": "ok",
+          "cited_ids": [
+            "2405.19486",
+            "2406.03614",
+            "2407.00710",
+            "2402.15005"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2405.19486",
+            "2407.00710",
+            "2406.03614",
+            "2404.07661",
+            "2402.15005"
+          ]
+        },
+        {
+          "case_id": "dev-ecology-smalln",
+          "status": "ok",
+          "cited_ids": [
+            "2401.12667",
+            "2405.19486"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2404.13147",
+            "2406.15594",
+            "2406.17346",
+            "2401.12667",
+            "2405.19486"
+          ]
+        },
+        {
+          "case_id": "dev-manufacturing-drift",
+          "status": "ok",
+          "cited_ids": [
+            "2405.19486",
+            "2404.12408"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2404.03329",
+            "2405.19486",
+            "2404.12408",
+            "2406.07250",
+            "2401.08978"
+          ]
+        },
+        {
+          "case_id": "dev-dropout-fairness",
+          "status": "ok",
+          "cited_ids": [
+            "2405.19486",
+            "2404.19127"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2405.19486",
+            "2403.18216",
+            "2406.07885",
+            "2402.11742",
+            "2404.19127"
+          ]
+        },
+        {
+          "case_id": "dev-labs-recall",
+          "status": "ok",
+          "cited_ids": [
+            "2402.16326",
+            "2407.00710",
+            "2406.10087"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2407.00710",
+            "2406.09257",
+            "2406.10087",
+            "2401.16407",
+            "2402.16326"
+          ]
+        },
+        {
+          "case_id": "dev-marketing-shap",
+          "status": "ok",
+          "cited_ids": [
+            "2406.05477",
+            "2404.19127",
+            "2405.19486"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2406.05477",
+            "2406.15327",
+            "2404.19127",
+            "2405.19486",
+            "2405.14522"
+          ]
+        },
+        {
+          "case_id": "dev-sensor-noise",
+          "status": "ok",
+          "cited_ids": [
+            "2406.10087",
+            "2405.19486",
+            "2406.03506"
+          ],
+          "low_evidence": false,
+          "top_ids": [
+            "2406.10087",
+            "2405.19486",
+            "2405.14088",
+            "2401.15500",
+            "2406.03506"
+          ]
+        }
+      ]
+    }
+  }
+}

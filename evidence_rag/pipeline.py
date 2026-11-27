@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import argparse
 
+from evidence_rag.ablate import run_ablation
 from evidence_rag.config import ensure_dirs
 from evidence_rag.download import download
 from evidence_rag.evaluate import analyze, retrieval_traces, run_generation, run_probes
@@ -22,7 +23,7 @@ from evidence_rag.feasibility import decide
 from evidence_rag.index_corpus import build_index
 from evidence_rag.prepare import prepare
 
-PHASES = ["download", "prepare", "index", "retrieve", "generate", "probes", "analyze", "feasibility"]
+PHASES = ["download", "prepare", "index", "retrieve", "generate", "probes", "analyze", "ablate", "feasibility"]
 
 
 def run(phases: list[str], generator: str, limit: int | None, include_heldout: bool) -> None:
@@ -51,6 +52,9 @@ def run(phases: list[str], generator: str, limit: int | None, include_heldout: b
         elif phase == "analyze":
             summary = analyze(generator)
             print(summary)
+        elif phase == "ablate":
+            info = run_ablation("extractive")
+            print(f"ablation variants: {info['variants']}")
         elif phase == "feasibility":
             decision = decide()
             print(decision["decision"])

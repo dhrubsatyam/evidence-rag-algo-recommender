@@ -106,7 +106,9 @@ def reciprocal_rank_fusion(rankings: list[list[str]], rrf_k: int) -> dict[str, f
     return scores
 
 
-def retrieve(query: str, top_k: int | None = None) -> dict:
+def retrieve(query: str, top_k: int | None = None, signals: set[str] | None = None) -> dict:
+    """Hybrid retrieval. `signals` optionally restricts the RRF inputs to
+    a subset of {"bm25", "dense", "neural"} for ablation runs."""
     state = _load_state()
     config = state["config"]
     top_k = top_k or int(config["top_k"])
@@ -120,8 +122,13 @@ def retrieve(query: str, top_k: int | None = None) -> dict:
     ids = state["ids"]
     lexical_ids = [ids[int(i)] for i in bm25_order]
     dense_ids = [ids[int(i)] for i in dense_order]
-    rankings = [lexical_ids, dense_ids]
-    neural_info = _neural_ranking(query, state, pool) if config.get("use_neural_signal") else None
+    rankings = []
+    if signals is None or "bm25" in signals:
+        rankings.append(lexical_ids)
+    if signals is None or "dense" in signals:
+        rankings.append(dense_ids)
+    use_neural = config.get("use_neural_signal") and (signals is None or "neural" in signals)
+    neural_info = _neural_ranking(query, state, pool) if use_neural else None
     if neural_info is not None:
         neural_ids, neural_scores = neural_info
         rankings.append(neural_ids)

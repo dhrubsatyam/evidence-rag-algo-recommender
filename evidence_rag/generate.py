@@ -273,6 +273,7 @@ def answer(
     generator: str = "local_lm",
     use_retrieval: bool = True,
     retrieval: dict | None = None,
+    signals: set[str] | None = None,
 ) -> dict:
     constraints = constraints or {}
     questions = clarification_questions(constraints)
@@ -293,7 +294,10 @@ def answer(
     if use_retrieval and retrieval is None:
         from evidence_rag.retrieve import retrieve
 
-        retrieval = retrieve(problem + "\n" + " ".join(f"{k} {v}" for k, v in constraints.items()))
+        retrieval = retrieve(
+            problem + "\n" + " ".join(f"{k} {v}" for k, v in constraints.items()),
+            signals=signals,
+        )
     results = (retrieval or {}).get("results", []) if use_retrieval else []
     low_evidence = bool((retrieval or {}).get("low_evidence")) if use_retrieval else True
     context = format_context(results, int(config["abstract_chars_in_prompt"])) if results else None

@@ -177,6 +177,15 @@ Automatic metrics (`outputs/metrics_*.json`):
 Human 0–2 relevance/suitability scores are collected manually per
 `data/eval/rubric.json` — not fabricated by code.
 
+**Retrieval ablation** (`evidence_rag/ablate.py`, phase `ablate`,
+`outputs/ablation.json`): the 10 dev cases are re-run through the
+extractive generator under four signal subsets — BM25-only,
+dense-only, BM25+dense, and the full three-signal hybrid. The neural
+variant produced the most resolved citations (27 vs 18 for the
+two-signal hybrid) with zero unsupported IDs; dense-only was weakest.
+This is the optimization evidence behind the Results section draft in
+`report/RESULTS_AND_CONCLUSION_DRAFT.md`.
+
 ### 9. Feasibility — `evidence_rag/feasibility.py`
 
 `outputs/adaptation_decision.json`: **defer** fine-tuning. Ten dev

@@ -1,0 +1,15 @@
+{
+  "task": "multi-label algorithm-family tagging",
+  "supervision": "weak labels from algorithm-name mentions in title+abstract",
+  "architecture": "Embedding(128) -> masked mean pool -> Linear(128,64)+ReLU+Dropout(0.3) -> Linear(64,4)",
+  "loss": "BCEWithLogitsLoss with per-label inverse-frequency pos_weight",
+  "optimizer": "AdamW lr=0.001 weight_decay=0.0001",
+  "epochs": 40,
+  "batch_size": 64,
+  "train_records": 571,
+  "val_records": 100,
+  "vocab_size": 7810,
+  "seed": 13,
+  "device": "mps",
+  "best_val_macro_f1": 0.4765
+}

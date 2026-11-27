@@ -1,0 +1,7 @@
+{
+  "best_val_macro_f1": 0.4765,
+  "epochs_trained": 40,
+  "train_seconds": 4.5,
+  "checkpoint": "outputs/neural/model.pt",
+  "note": "Weakly supervised labels; macro-F1 is measured against keyword-mention labels, not human judgment."
+}

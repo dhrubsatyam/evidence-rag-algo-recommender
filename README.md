@@ -128,6 +128,50 @@ python -m evidence_rag.serve --port 8080
 
 The extractive phase builds the shortlist from algorithm names that actually appear in the retrieved abstracts. It is deterministic and does not download a language model. The first `local_lm` run downloads the weights; generation is unsampled (`do_sample=False`) so repeated runs stay stable. Citations that are not in the retrieved set for that question are stripped and counted as unsupported. Generation files are `outputs/generations_extractive.jsonl` and `outputs/generations_local_lm.jsonl`, so the two runs do not overwrite each other. Leaving a constraint blank returns clarifying questions instead of a recommendation; choosing a non-classification task returns an insufficient-evidence response.
 
+## Neural model (built from scratch)
+
+In addition to the pretrained retrieval/generation components, the repo
+contains a small deep learning model implemented and trained from
+scratch in PyTorch — `evidence_rag/neural/`.
+
+**Task.** Multi-label classification: given a paper title + abstract,
+predict which algorithm families it discusses (`linear`,
+`instance_kernel`, `tree_ensemble`, `neural`). Labels are weakly
+supervised from algorithm-name mentions in the corpus text.
+
+**Architecture** (`evidence_rag/neural/model.py`):
+
+```
+Embedding(vocab=~15k, dim=128) -> masked mean pooling
+  -> Linear(128, 64) + ReLU + Dropout(0.3)
+  -> Linear(64, 4) logits
+```
+
+~2M parameters, no pretrained weights.
+
+**Training** (`evidence_rag/neural/train.py`): 571/100 train/val split
+of the 671-record corpus, `BCEWithLogitsLoss` with per-label
+inverse-frequency `pos_weight`, `AdamW` (lr 1e-3, weight_decay 1e-4),
+batch 64, 40 epochs, best-validation checkpoint kept. Best validation
+macro-F1 = **0.477** (labels are keyword-derived, so this measures
+agreement with the weak labels, not human judgment). Per-epoch logs:
+`outputs/neural/train_log.jsonl`; summary: `outputs/neural/metrics.json`.
+
+```bash
+# retrain from scratch
+python -m evidence_rag.neural.train --epochs 40
+
+# score one abstract
+python -m evidence_rag.neural.predict "Title. Abstract text..."
+
+# score the whole corpus -> outputs/neural/corpus_scores.jsonl
+python -m evidence_rag.neural.predict --corpus
+```
+
+Intended use: an auxiliary family-relevance signal that can re-rank or
+filter retrieved abstracts before generation. It is not yet wired into
+the default retrieval path; the RRF hybrid remains the baseline.
+
 ## Tests
 
 ```bash

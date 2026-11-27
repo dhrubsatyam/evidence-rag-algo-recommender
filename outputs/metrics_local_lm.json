@@ -1,21 +1,21 @@
 {
-  "rows": 20,
-  "cases": 10,
+  "rows": 60,
+  "cases": 30,
   "modes": {
-    "with_retrieval": 10,
-    "without_retrieval": 10
+    "with_retrieval": 30,
+    "without_retrieval": 30
   },
   "generators": {
-    "local_lm": 20
+    "local_lm": 60
   },
   "statuses": {
-    "ok": 10,
-    "ungrounded_baseline": 10
+    "ok": 30,
+    "ungrounded_baseline": 30
   },
-  "cited_ids": 15,
+  "cited_ids": 54,
   "unsupported_ids": 0,
-  "cases_where_retrieval_added_citations": 9,
-  "mean_latency_seconds": 3.255,
+  "cases_where_retrieval_added_citations": 28,
+  "mean_latency_seconds": 3.145,
   "note": "Human 0-2 relevance and suitability scores are not computed here. This file records automatic checks only: identifier resolution, latency, and whether retrieval changed the citation set.",
   "generation_file": "generations_local_lm.jsonl"
 }

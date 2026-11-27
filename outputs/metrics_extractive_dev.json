@@ -1,0 +1,21 @@
+{
+  "rows": 20,
+  "cases": 10,
+  "modes": {
+    "with_retrieval": 10,
+    "without_retrieval": 10
+  },
+  "generators": {
+    "extractive": 20
+  },
+  "statuses": {
+    "ok": 10,
+    "ungrounded_baseline": 10
+  },
+  "cited_ids": 27,
+  "unsupported_ids": 0,
+  "cases_where_retrieval_added_citations": 10,
+  "mean_latency_seconds": 0.001,
+  "note": "Human 0-2 relevance and suitability scores are not computed here. This file records automatic checks only: identifier resolution, latency, and whether retrieval changed the citation set.",
+  "generation_file": "generations_extractive.jsonl"
+}
